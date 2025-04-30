@@ -1,0 +1,37 @@
+* Worcestershire Sauce Classifier
+
+This tool classifies product names as Worcestershire sauce or not Worcestershire sauce.
+
+** Installation
+
+#+begin_src bash
+  pip install -e .
+#+end_src
+
+** Usage
+
+The classifier accepts product names from standard input (default) or from a file, one per line, and outputs a binary value (1 for Worcestershire sauce, 0 for not) for each product.
+
+#+begin_src bash
+  # Read from stdin (default)
+  echo "Lea & Perrins Worcestershire Sauce" | tinytiger
+
+  # Read from file
+  tinytiger --infile products.txt
+#+end_src
+
+Increase verbosity with -v or --verbose flag:
+
+#+begin_src bash
+  echo "W Sauce" | tinytiger -v
+  tinytiger --infile products.txt -vv
+#+end_src
+
+** Architecture
+
+The codebase follows SOLID principles:
+- Single Responsibility: Each module has one job
+- Open/Closed: Easily extendable without modification
+- Liskov Substitution: Models can be swapped out
+- Interface Segregation: Clean interfaces between components
+- Dependency Inversion: High-level modules don't depend on low-level details

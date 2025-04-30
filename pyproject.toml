@@ -1,0 +1,13 @@
+[project]
+name = "tinytiger"
+version = "0.1.0"
+description = "Classify product names as Worcestershire sauce or not"
+readme = "README.md"
+authors = [{ name = "Taylor Monacelli", email = "taylormonacelli@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["tensorflow", "numpy", "scikit-learn", "pandas"]
+[project.scripts]
+tinytiger = "tinytiger:main"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
